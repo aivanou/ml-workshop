@@ -3,7 +3,7 @@
 import os
 import shutil
 import requests
-import tqdm_utils
+import common.tqdm_utils as tqdm_utils
 
 
 REPOSITORY_PATH = "https://github.com/tierex/ml-workshop"
@@ -58,3 +58,23 @@ def download_tag_prediction(force=False):
     )
 
 
+def download_name_generation(force=False):
+    sequential_downloader(
+        "names",
+        [
+            "names",
+        ],
+        "names",
+        force=force
+    )
+    
+def download_text_generation(force=False):
+    sequential_downloader(
+        "text-generation",
+        [
+            "nitz_texts.txt",
+            "ny_articles.tar.gz",
+        ],
+        "text-generation",
+        force=force
+    )
