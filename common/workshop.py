@@ -67,7 +67,7 @@ def download_name_generation(force=False):
         "names",
         force=force
     )
-    
+
 def download_text_generation(force=False):
     sequential_downloader(
         "text-generation",
@@ -76,5 +76,17 @@ def download_text_generation(force=False):
             "ny_articles.tar.gz",
         ],
         "text-generation",
+        force=force
+    )
+
+def download_ner_generation(force=False):
+    sequential_downloader(
+        "ner",
+        [
+            "train.txt",
+            "test.txt",
+            "validation.txt"
+        ],
+        "ner",
         force=force
     )
