@@ -90,3 +90,16 @@ def download_ner_generation(force=False):
         "ner",
         force=force
     )
+
+def download_art_generation(force=False):
+    sequential_downloader(
+        "art",
+        [
+            "obj1-cat.jpg",
+            "obj2-dog.jpg",
+            "style1-van-gogh.jpg",
+            "style2-dali.jpg"
+        ],
+        "art",
+        force=force
+    )
