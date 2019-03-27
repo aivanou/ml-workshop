@@ -3,10 +3,40 @@ The repository represents the set of jupyter noteboooks for ml workshop.
 
 Below is the separation of the notebooks by level and topics that is covers:
 
+Level 1:
+
 1. complete_notebooks/MNIST-classification.ipynb - classification task, implementing classification from scratch
+
+Level 2:
+
 2. complete_notebooks/TagsPrediction.ipynb - multi lable classification, Bag of words, TFiDF
+
+Level 3:
+
 3. complete_notebooks/charrnn_pytorch.ipynb - Recurrent neural network
+
+Level 4:
+
 4. complete_notebooks/text_generation_pytorch.ipynb - word embeddings, complex recurrent networks(lstm, gru)
+
+Level 5:
+
 5. complete_notebooks/NER-pytorch.ipynb - bidirectional RNN networks
+
+Level 6:
+
 6. complete_notebooks/artistic_transfer.ipynb - artistic style transfer 
 
+
+Tasks:
+Level 1:
+
+tasks/MNIST-classification-tasks.ipynb
+
+Level 2:
+
+tasks/TagsPrediction-tasks.ipynb
+
+Level 3:
+
+tasks/NER-pytorch-tasks.ipynb
