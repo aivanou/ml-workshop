@@ -236,12 +236,13 @@ submit_df = pd.DataFrame()
 submit_df['Id'] = test_df['Id']
 
 test_preds = np.array([])
-for x_cont,x_cat in iter(data.test_dl):
-    preds = model(x_cont, x_cat)
-    preds = preds.detach().cpu().numpy()
-#     import pdb;pdb.set_trace()
-    preds = np.squeeze(preds)
-    test_preds = np.concatenate((test_preds, preds))
+with torch.no_grad():
+    for x_cont,x_cat in iter(data.test_dl):
+        preds = model(x_cont, x_cat)
+        preds = preds.detach().cpu().numpy()
+    #     import pdb;pdb.set_trace()
+        preds = np.squeeze(preds)
+        test_preds = np.concatenate((test_preds, preds))
 
 # test_preds=learn.get_preds(DatasetType.Test)
 # submit_df[dep_var]=np.exp(test_preds[0].data).numpy().T[0]
